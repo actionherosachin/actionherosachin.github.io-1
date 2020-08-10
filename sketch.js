@@ -7,11 +7,6 @@ const Body = Matter.Body;
 const Render = Matter.Render;
 // create the array of ranindrops
 var raindrops = [];
-constructor(x,y,radius);{
-  var options = {
-    restitution=0.3
-  }
-}
 // make  a new umbrella 
 var img;
 // give image to the background
@@ -51,12 +46,11 @@ function draw(){
       var raindrop = new Drop(random(0, windowWidth), -100,10);
       raindrops.push(raindrop);
     }
-   
 // display umbrella img
     img.display();
 // display raindrops
     for(var i = 0; i < raindrops.length; i++){
-     // raindrops[i].fall(20);
+      raindrops[i].fall(20);
       raindrops[i].display();
     } 
 // add random img to the thunder images 1
